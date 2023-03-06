@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getPopularSeries } from '../../services/SeriesService';
+import "./Styles.css";
 
 const Series = () => {
   const [series, setSeries] = useState([]);
@@ -22,18 +23,22 @@ const Series = () => {
   return (
     <>
       <input onChange={_onChange} />
-      {(filteredList.length ? filteredList : series).map((item) => (
-        <div key={item.id}>
-          <ul>
-            <li>{item.name}</li>
-            <li>{item.overview}</li>
-            <li>{item.vote_average}</li>
-          </ul>
-          <img src={item.image} alt="posters" />
+      <div>
+        <div className='boxSeries'>
+          {(filteredList.length ? filteredList : series).map((item) => (
+            <div key={item.id}>
+              {/* <ul>
+                <li>{item.title}</li>
+                <li>{item.overview}</li>
+                <li>{item.vote_average}</li>
+              </ul> */}
+              <img src={item.image} alt="posters" />
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </>
   )
 }
 
-export default Series
+export default Series;

@@ -22,7 +22,7 @@ export const getPopularSeries = async (withImage = false) => {
     return results.map((item) => {
         let serie = {...item}
         if (withImage) {
-            serie["image"] = `https://image.tmdb.org/t/p/w500${item.poster_path}`
+            serie["image"] = `https://image.tmdb.org/t/p/w300${item.poster_path}`
         }
         return serie
     })
