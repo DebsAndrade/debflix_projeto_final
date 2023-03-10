@@ -27,11 +27,6 @@ const Movies = () => {
         <div className='boxMovies'>
           {(filteredList.length ? filteredList : movies).map((item) => (
             <div key={item.id}>
-              {/* <ul>
-                <li>{item.title}</li>
-                <li>{item.overview}</li>
-                <li>{item.vote_average}</li>
-              </ul> */}
               <img src={item.image} alt="posters" />
             </div>
           ))}

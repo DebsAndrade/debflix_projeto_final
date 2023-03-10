@@ -27,11 +27,6 @@ const Series = () => {
         <div className='boxSeries'>
           {(filteredList.length ? filteredList : series).map((item) => (
             <div key={item.id}>
-              {/* <ul>
-                <li>{item.title}</li>
-                <li>{item.overview}</li>
-                <li>{item.vote_average}</li>
-              </ul> */}
               <img src={item.image} alt="posters" />
             </div>
           ))}

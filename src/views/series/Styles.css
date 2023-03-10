@@ -1,4 +1,4 @@
-.boxSeries {
+.boxSeries { /* O boxSeries foi uma classeName criada para poder dar estilo na div que guarda o retorno dos dados da API, imagem, nota, título. */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
